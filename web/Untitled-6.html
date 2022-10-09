@@ -1,0 +1,444 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- utf-8 works for most cases -->
+        <meta name="viewport" content="width=device-width">
+        <!-- Forcing initial-scale shouldn't be necessary -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Use the latest (edge) version of IE rendering engine -->
+        <title>EmailTemplate-Hybrid</title>
+        <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+        <!-- Please use an inliner tool to convert all CSS to inline as inpage or external CSS is removed by email clients -->
+        <!-- important in CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are encountered -->
+
+        <!-- CSS Reset -->
+        <style type="text/css">
+            /* What it does: Remove spaces around the email design added by some email clients. */
+            /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+            html, body {
+                margin: 0 !important;
+                padding: 0 !important;
+                height: 100% !important;
+                width: 100% !important;
+            }
+            /* What it does: Stops email clients resizing small text. */
+            * {
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+            }
+            /* What it does: Forces Outlook.com to display emails full width. */
+            .ExternalClass {
+                width: 100%;
+            }
+            /* What is does: Centers email on Android 4.4 */
+            div[style*="margin: 16px 0"] {
+                margin: 0 !important;
+            }
+            /* What it does: Stops Outlook from adding extra spacing to tables. */
+            table, td {
+                mso-table-lspace: 0pt !important;
+                mso-table-rspace: 0pt !important;
+            }
+            /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+            table {
+                border-spacing: 0 !important;
+                border-collapse: collapse !important;
+                table-layout: fixed !important;
+                margin: 0 auto !important;
+            }
+            table table table {
+                table-layout: auto;
+            }
+            /* What it does: Uses a better rendering method when resizing images in IE. */
+            img {
+                -ms-interpolation-mode: bicubic;
+            }
+            /* What it does: Overrides styles added when Yahoo's auto-senses a link. */
+            .yshortcuts a {
+                border-bottom: none !important;
+            }
+            /* What it does: Another work-around for iOS meddling in triggered links. */
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+            }
+        </style>
+
+        <!-- Progressive Enhancements -->
+        <style type="text/css">
+            /* What it does: Hover styles for buttons */
+            .button-td, .button-a {
+                transition: all 100ms ease-in;
+            }
+            .button-td:hover, .button-a:hover {
+                background: #555555 !important;
+                border-color: #555555 !important;
+            }
+
+            /* Media Queries */
+            @media screen and (max-width: 480px) {
+                /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+                .fluid, .fluid-centered {
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    height: auto !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                }
+                /* And center justify these ones. */
+                .fluid-centered {
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                }
+                /* What it does: Forces table cells into full-width rows. */
+                .stack-column, .stack-column-center {
+                    display: block !important;
+                    width: 100% !important;
+                    max-width: 100% !important;
+                    direction: ltr !important;
+                }
+                /* And center justify these ones. */
+                .stack-column-center {
+                    text-align: center !important;
+                }
+                /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+                .center-on-narrow {
+                    text-align: center !important;
+                    display: block !important;
+                    margin-left: auto !important;
+                    margin-right: auto !important;
+                    float: none !important;
+                }
+                table.center-on-narrow {
+                    display: inline-block !important;
+                }
+            }
+        </style>
+    </head>
+    <body width="100%" bgcolor="#e0e0e0" style="margin: 0;" yahoo="yahoo">
+        <table cellpadding="0" cellspacing="0" border="0" height="100%" width="100%" bgcolor="#e0e0e0" style="border-collapse:collapse;">
+            <tr>
+                <td><center style="width: 100%;">
+
+                <!-- Visually Hidden Preheader Text : BEGIN -->
+                <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;mso-hide:all;font-family: sans-serif;"> (Optional) This text will appear in the inbox preview, but not the email body. </div>
+                <!-- Visually Hidden Preheader Text : END -->
+
+                <div style="max-width: 680px;"> 
+                    <!--[if (gte mso 9)|(IE)]>
+                      <table cellspacing="0" cellpadding="0" border="0" width="680" align="center">
+                      <tr>
+                      <td>
+                      <![endif]--> 
+
+                    <!-- Email Header : BEGIN -->
+                    <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+                        <tr>
+
+                        </tr>
+                    </table>
+                    <!-- Email Header : END --> 
+
+                    <!-- Email Body : BEGIN -->
+                    <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="max-width: 680px;">
+
+                        <!-- Hero Image, Flush : BEGIN -->
+                        <tr>
+                            <td dir="rtl" bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 10px 0;"><!--[if mso]>
+                                       <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                                       <tr>
+                                       <td align="center" valign="top" width="660">
+                                       <![endif]-->
+                                <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:650px;">
+                                    <tr>
+                                        <td align="center" valign="top" style="font-size:0; padding: 10px 0;"><!--[if mso]>
+                                                         <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                                                         <tr>
+                                                         <td align="left" valign="top" width="220">
+                                                         <![endif]-->
+                                            <div style="display:inline-block; margin: 0 -2px; max-width:33.33%; min-width:160px; vertical-align:top; width:100%;" class="stack-column"></div>
+                                            <!--[if mso]>
+                                                           </td>
+                                                           <td align="left" valign="top" width="440">
+                                                           <![endif]-->
+                                            <div style="display:inline-block; margin: 0 -2px; max-width:66.66%; min-width:320px; vertical-align:top;" class="stack-column">
+                                                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                    <tr>
+                                                        <td dir="ltr" style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 0px; color: #555555; padding: 10px 10px 0; text-align: left;" class="center-on-narrow">
+                                                            <h2 class="hero_header"><span class="light">TERMINOS Y CONDICIONES</span></h2>
+                                                            <!-- Button : Begin -->
+                                                            <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+                                                                <tr> </tr>
+                                                            </table>
+                                                            <!-- Button : END --></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <!--[if mso]>
+                                                           </td>
+                                                           </tr>
+                                                           </table>
+                                                           <![endif]--></td>
+                                    </tr>
+                                </table>
+                                <!--[if mso]>
+                                         </td>
+                                         </tr>
+                                         </table>
+                                         <![endif]--></td>				
+                        </tr>
+                        <!-- Hero Image, Flush : END --> 
+
+                        <!-- 1 Column Text : BEGIN -->
+                        <tr>
+                            <td><table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                    <tr> </tr>
+                                </table></td>
+                        </tr>
+                        <!-- 1 Column Text : BEGIN --> 
+
+                        <!-- Background Image with Text : BEGIN -->
+                        <tr>
+                            <td bgcolor="#222222" valign="middle" style="text-align: center; background-position: center center !important; background-size: cover !important;"><!--[if gte mso 9]>
+                                      <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:680px;height:175px; background-position: center center !important;">
+                                      <v:fill type="tile" src="assets/Hybrid/Image_680x230.png" color="#222222" />
+                                      <v:textbox inset="0,0,0,0">
+                                      <![endif]-->
+
+                                <div> 
+                                    <!--[if mso]>
+                                              <table border="0" cellspacing="0" cellpadding="0" align="center" width="500">
+                                              <tr>
+                                              <td align="center" valign="top" width="500">
+                                              <![endif]-->
+                                    <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:500px; margin: auto;">
+                                        <tr>
+                                            <td valign="middle" style="text-align: left; padding: 40px 20px; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #ffffff;">• Condiciones de uso los usuarios finales de esta tienda virtual, leer atentamente los Términos y condiciones antes de utilizar los sitios web y los servicios de internet proporcionados. Esto significa que usted acepta expresamente los términos y condiciones generales. Si no está de acuerdo con las mismas, comincarse con los administradores de los servicios proporcionados por el sitio para que pueda utilizarlos. <br>
+                                                </br>
+                                                • Derechos de Propiedad Intelectual: Todos los derechos de propiedad intelectual sobre el sitio web pertenecen al sitio web. Queda prohibido el uso de los derechos de propiedad intelectual sin el consentimiento previo, explícito y por escrito.<br>
+                                                </br>
+                                                </br>
+                                                • Derechos de Autor Este sitio web está protegido por la última ley de derechos de autor. Todos los derechos reservados en cuanto a contenido y formato pertenecen a los integrantes del programa del taller, por lo que queda prohibido el uso, modificación, reproducción, distribución, distribución o venta de los derechos afectados sin previo aviso, declaración, consentimiento por escrito o cualquier otro uso permitido. <br>
+                                                </br>
+                                                • Signos distintivos y patentes Todos los signos distintivos (marcas de productos y de servicio, lemas comerciales y nombres comerciales) y patentes registradas de acuerdo a la legislación nacional y supranacional, son propiedad de los desarrolladores del sitio, a menos que se indique lo contrario. <br>
+                                                </br>
+                                                • Aceptación de términos Los sitios Web y referencias están disponibles para que el usuario bajo su responsabilidad los utilice adecuadamente sin aprovecharse de alguna falla que ocurra y saque provecho de la misma. Si encuentra alguna falla en nuestro sitio Web reportarla al administrador. Los cambios y actualizaciones en los términos y condiciones de uso serán comunicados en nuestro sitio Web oportunamente para que todos los usuarios se informen de los términos y condiciones de uso vigente. Está bajo la responsabilidad del usuario enterarse de los nuevos cambios y restringirse a cumplir como normativa del sitio Web. La información de los eventos institucionales será de carácter público para todos los usuarios en el sitio Web, mientras los vínculos que soliciten el registro del usuario estarán restringidos para todo usuario que no esté autenticado, este último será responsable del uso adecuado o no del manejo de la información. En caso incumpla, el web master desactivará su cuenta de usuario y recibirá una amonestación. <br>
+                                                </br>
+
+                                                • Obligaciones de los usuarios registrados:El acceso a los servicios a través del Código de Usuario y Contraseña creados es de su plena y exclusiva responsabilidad, así como por el uso de los mismos. El uso diligente del Código de Usuario y Contraseña, mantener y preservar la confidencialidad de los mismos. Si se olvida código de Usuario y Contraseña o cualquier otra infracción a la seguridad de la misma no siendo el área de sistemas comunicarse con el administrador. No usar el Código de Usuario y Contraseña para ningún propósito ilegal. <br>
+                                                • Obligaciones de los usuarios en general El acceso de los servicios Web son carácter público en zonas públicas de la Web donde la información entregada es de la referida empresa. El usuario se obliga a utilizar los servicios y contenidos que le proporciona el portal conforme a la legislación vigente y a los principios de buena fe y usos generalmente aceptados y a no contravenir con su actuación a través de la Web, sino su cuenta será inhabilitada. <br>
+                                                • Modificaciones a los Términos y Condiciones La empresa se reserva el derecho de modificar el contenido y alcance de los presentes Términos y Condiciones en cualquier momento y según lo considere necesario. El Usuario estará obligado a sujetarse a dichas modificaciones, una vez que éstas entren en vigor. Delimitación de responsabilidad Toda la información que es publicada en esta página Web, la cual incluye, pero no se limita, a los gráficos, textos y referencias a otras páginas, se proporciona "como es" y está sujeta a posibles modificaciones sin aviso previo. La información a la que se hace referencia es proporcionada sin garantía de cualquier clase, expresa o implícita, incluyendo, pero no limitándose a una garantía de negocios y similares o a encontrarse libre de todo virus de computación</td>
+                                        </tr>
+                                    </table>
+                                    <!--[if (gte mso 9)|(IE)]>
+                                              </td>
+                                              </tr>
+                                              </table>
+                                              <![endif]--> 
+                                </div>
+
+                                <!--[if gte mso 9]>
+                                        </v:textbox>
+                                        </v:rect>
+                                        <![endif]--></td>
+                        </tr>
+                        <!-- Background Image with Text : END --> 
+
+                        <!-- Two Even Columns : BEGIN -->
+                        <tr>
+                            <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%"><!--[if mso]>
+                                      <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                                      <tr>
+                                      <td align="center" valign="top" width="660">
+                                      <![endif]-->
+                    </table>
+
+                    <table cellspacing="0" cellpadding="0" border="0" align="center" bgcolor="#ffffff" width="100%" style="max-width: 680px;">
+                        <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:660px;">
+                            <tr>
+                                <td dir="ltr" bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 10px 0;"><!--[if mso]>
+                                        <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                                        <tr>
+                                        <td align="center" valign="top" width="660">
+                                        <![endif]-->
+                                    <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:660px;">
+                                        <tr>
+                                            <td align="center" valign="baseline" style="font-size:0; padding: 10px 0;"><a href="http://www.google.com" style="background: #222222; border: 15px solid #222222; padding: 0 10px;color: #ffffff; font-family: sans-serif; font-size: 13px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 3px; font-weight: bold;" class="button-a">
+                                                    <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                    A Button
+                                                    <!--[if mso]>&nbsp;&nbsp;&nbsp;&nbsp;<![endif]-->
+                                                </a><!--[if mso]>
+                                                              <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                                                              <tr>
+                                                              <td align="left" valign="top" width="220">
+                                                              <![endif]-->
+                                                <div style="display:inline-block; margin: 0 -2px; max-width:33.33%; min-width:160px; vertical-align:top; width:100%;" class="stack-column">
+                                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                        <tr>
+                                                            <td dir="ltr" style="padding: 0 10px 10px 10px;">                    
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if mso]>
+                                                            </td>
+                                                            <td align="left" valign="top" width="440">
+                                                            <![endif]-->
+                                                <div style="display:inline-block; margin: 0 -2px; max-width:66.66%; min-width:320px; vertical-align:top;" class="stack-column">
+                                                    <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                        <tr>
+                                                            <td dir="ltr" style="font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #555555; padding: 10px 10px 0; text-align: left;" class="left-on-narrow"><strong style="color:#111111;">
+                                                                    <!-- Button : Begin -->
+                                                                    <table cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="float:left;">
+
+
+                                                                    </table>
+                                                                    <!-- Button : END --></td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!--[if mso]>
+                                                            </td>
+                                                            </tr>
+                                                            </table>
+                                                            <![endif]--></td>
+                                        </tr>
+                                    </table>
+                                    <!--[if mso]>
+                                          </td>
+                                          </tr>
+                                          </table>
+                                          <![endif]--></td>
+                                <td align="center" valign="top" style="font-size:0; padding: 10px 0;"><!--[if mso]>
+                                                    <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                                                    <tr>
+                                                    <td align="left" valign="top" width="330">
+                                                    <![endif]-->
+                            <tr>
+
+                                <!-- Button : END --></td>
+
+                            </tr>
+                        </table>
+                </div>
+
+                <!--[if mso]>
+                                        </td>
+                                        <td align="left" valign="top" width="330">
+                                        <![endif]-->
+
+                <div style="display:inline-block; max-width:50%; margin: 0 -2px; min-width:200px; vertical-align:top; width:100%;" class="stack-column">
+
+
+                    <!--[if mso]>
+                                            </td>
+                                            </tr>
+                                            </table>
+                                            <![endif]--></td>
+                    </tr>
+                    </table>
+
+                    <!--[if mso]>
+                            </td>
+                            </tr>
+                            </table>
+                            <![endif]--></td>
+                    </tr>
+                    <!-- Two Even Columns : END --> 
+
+                    <!-- Three Even Columns : BEGIN -->
+                    <tr>
+                        <td bgcolor="#ffffff" align="center" height="100%" valign="top" width="100%" style="padding: 10px 0;"><!--[if mso]>
+                                  <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                                  <tr>
+                                  <td align="center" valign="top" width="660">
+                                  <![endif]-->
+
+                            <table border="0" cellpadding="0" cellspacing="0" align="center" width="100%" style="max-width:660px;">
+                                <tr>
+                                    <td align="center" valign="top" style="font-size:0;"><!--[if mso]>
+                                                    <table border="0" cellspacing="0" cellpadding="0" align="center" width="660">
+                                                    <tr>
+                                                    <td align="left" valign="top" width="220">
+                                                    <![endif]-->
+
+                                        <div style="display:inline-block; margin: 0 -2px; max-width:33.33%; min-width:220px; vertical-align:top; width:100%;" class="stack-column">
+                                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                <tr>
+                                                    <td style="padding: 10px 10px;"><table cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                                            <tr>
+
+
+
+                                                            </tr>
+                                                        </table>
+                                                        </div>
+
+                                                        <!--[if mso]>
+                                                                      </td>
+                                                                      <td align="left" valign="top" width="220">
+                                                                      <![endif]-->
+
+                                                        <div style="display:inline-block; margin: 0 -2px; max-width:33.33%; min-width:220px; vertical-align:top; width:100%;" class="stack-column">
+                                                            <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                                                <tr>
+                                                                    <td style="padding: 10px 10px;"><table cellspacing="0" cellpadding="0" border="0" width="100%" style="font-size: 14px;text-align: left;">
+                                                                            <tr>
+
+
+                                                                            </tr>
+                                                                        </table>
+                                                                        </div>
+
+                                                                        <!--[if mso]>
+                                                                                      </td>
+                                                                                      <td align="left" valign="top" width="220">
+                                                                                      <![endif]-->
+
+                                                                        <div style="display:inline-block; margin: 0 -2px; max-width:33.33%; min-width:220px; vertical-align:top; width:100%;" class="stack-column">
+
+
+                                                                            <!--[if mso]>
+                                                                                    </td>
+                                                                                    </tr>
+                                                                                    </table>
+                                                                                    <![endif]--></td>
+                                                                </tr>
+                                                                <!-- Three Even Columns : END --> 
+
+                                                                <!-- Thumbnail Left, Text Right : BEGIN -->
+                                                                <tr> </tr>
+                                                                <!-- Thumbnail Left, Text Right : END --> 
+
+                                                                <!-- Thumbnail Right, Text Left : BEGIN -->
+                                                                <tr> </tr>
+                                                                <!-- Thumbnail Right, Text Left : END -->
+
+                                                            </table>
+                                                            <!-- Email Body : END --> 
+
+                                                            <!-- Email Footer : BEGIN -->
+                                                            <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 680px;">
+                                                                <tr>
+                                                                    <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #888888;"><webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;">View as a Web Page</webversion>
+                                                                <br>
+                                                                <br>
+                                                                Company Name<br>
+                                                                <span class="mobile-link--footer">Adobe Systems Incorporated, 345 Park Avenue</span> <br>
+                                                                <br>
+                                                                <unsubscribe style="color:#888888; text-decoration:underline;">unsubscribe</unsubscribe></td>
+                                                                </tr>
+                                                            </table>
+                                                            <!-- Email Footer : END --> 
+
+                                                            <!--[if (gte mso 9)|(IE)]>
+                                                              </td>
+                                                              </tr>
+                                                              </table>
+                                                              <![endif]--> 
+                                                        </div>
+                                                        </center></td>
+                                                </tr>
+                                            </table>
+                                            </body>
+                                            </html>

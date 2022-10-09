@@ -1,0 +1,382 @@
+
+body{
+    overflow-x: hidden;
+}
+
+.overlaynull{
+    visibility: hidden;
+    display: none;
+}
+
+.overlayOpen{
+    visibility: visible;
+    background: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.overlayOpen .popupOpen{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    font-family: 'Popins', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    transition: .10s ease all;
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+.overlayOpen .popupOpen .btn-cerrar-popup{
+    filter: invert(0%) sepia(1%) saturate(0%) hue-rotate(195deg) brightness(86%) contrast(100%);
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 400px;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.overlayOpen .popupOpen .btn-cerrar-popup:hover{
+    filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(94deg) brightness(85%) contrast(93%);
+}
+
+.overlayOpen .popupOpen .btn-submit{
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: #1c809c;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.overlayOpen .popupOpen .btn-submit:hover{
+    background-color: #37b1d4;
+}
+
+.overlayOpen .popupOpen .inputs{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #BBBBBB;
+    border-radius: 15px;
+
+}
+
+.overlayOpen .popupOpen .coda{
+    color: #D82847;
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.overlayOpen .popupOpen .suspended{
+    color: #5254DA;
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.overlayOpen .popupOpen .eliminada{
+    color: #DA2F2F;
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.overlayOpen .popupOpen .wait{
+    color: #2F56DA;
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.overlayOpen .popupOpen h4{
+    font-size: 25px;
+    margin: 15px;
+}
+
+
+/*=== ALERTAS LISTADOS===*/
+.overlay1null{
+    visibility: hidden;
+    display: none;
+}
+
+.overlay1Open{
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay1Open .popup1Open{
+    background: #f8f8f8;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 5px;
+    font-family: 'Popins', sans-serif;
+    padding: 20px;
+    text-align: center;
+    width: 500px;
+    transition: .10s ease all;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.overlay1Open .popup1Open .btn-cerrar-popup{
+    filter: invert(0%) sepia(1%) saturate(0%) hue-rotate(195deg) brightness(86%) contrast(100%);
+    width: 30px;
+    border: none;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 400px;
+    transition: .3s ease all;
+    cursor: pointer;
+}
+
+.overlay1Open .popup1Open .btn-cerrar-popup:hover{
+    filter: invert(88%) sepia(0%) saturate(0%) hue-rotate(94deg) brightness(85%) contrast(93%);
+}
+
+.popup1Open h3{
+    color: var(--text-color);
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.popup1Open h4{
+    color: var(--text-color);
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.popup1Open .suspended{
+    color: #5254DA;
+    font-size: 75px;
+    margin-bottom: 20px;
+}
+
+.popup1Open form .input {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    height: 52px;
+    font-size: 18px;
+    line-height: 52px;
+    text-align: center;
+    border: 1px solid #BBBBBB;
+}
+
+.popup1Open form .btn-submit {
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    color: #fff;
+    background: var(--primary-color);
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.popup1Open .btn-activar{
+    background-color: #55CD28;
+    padding: 10px 20px;
+    outline: none;
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #fff;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.popup1Open .btn-activar:hover{
+    border-color: #55CD28;
+    background-color: #fff;
+    color: #55CD28;
+}
+
+.popup1Open .btn-eliminar{
+    background-color: #CD2828;
+    padding: 10px 20px;
+    outline: none;
+    border: 2px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #fff;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.popup1Open .btn-eliminar:hover{
+    border-color: #CD2828;
+    background-color: #fff;
+    color: #CD2828;
+}
+
+.popup1Open .btn-suspender{
+    background-color: #284ECD;
+    padding: 10px 20px;
+    outline: none;
+    border: 2px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #fff;
+    border-radius: 6px;
+    transition: all 0.4s ease;
+}
+
+.popup1Open .btn-suspender:hover{
+    border-color: #284ECD;
+    background-color: #fff;
+    color: #284ECD;
+}
+
+body.dark .popup1Open .btn-activar,
+body.dark .popup1Open .btn-eliminar,
+body.dark .popup1Open .btn-suspender{
+    background-color: var(--primary-color);
+}
+
+
+/*===Otra alerta===*/
+.toastnull{
+    position: absolute;
+    top: 65px;
+    right: 35px;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid #4070f4;
+    overflow: hidden;
+    transform: translateX(calc(100% + 35px));
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+
+.toastOpen{
+    position: absolute;
+    top: 65px;
+    right: 35px;
+    border-radius: 12px;
+    background-color: #fff;
+    padding: 20px 35px 20px 25px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    border-left: 6px solid #4070f4;
+    overflow: hidden;
+    transform: translateX(0%);
+}
+
+body.dark .toastOpen{
+    background-color: var(--primary-color);
+}
+
+.toastOpen .toast-content{
+    display: flex;
+    align-items: center;
+}
+
+body.dark .message .text.text-1{
+    color: var(--text-color);
+}
+
+.toast-content .check{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    background-color: #4070f4;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+.toast-content .message{
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.message .text{
+    font-size: 20px;
+    font-weight: 400;
+    color: #666666;
+}
+
+.message .text.text-1{
+    font-weight: 600;
+    color: #333;
+}
+
+.toastOpen .close{
+    border: none;
+    background: none;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    padding: 5px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+body.dark .toastOpen .close{
+    color: var(--text-color);
+}
+
+
+.toastOpen .close:hover{
+    opacity: 1;
+}
+
+/*===RESPONSIVE===*/
+@media(max-width:870px){
+    .overlayOpen .popupOpen{
+        transform: scale(0.8);
+    }
+
+    .overlay1Open .popup1Open{
+        transform: scale(0.8);
+    }
+
+}
+
+@media(max-width:570px){
+    .overlayOpen .popupOpen{
+        transform: scale(0.7);
+    }
+
+    .overlay1Open .popup1Open{
+        transform: scale(0.8);
+    }
+}
+
